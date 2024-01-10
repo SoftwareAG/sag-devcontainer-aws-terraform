@@ -32,6 +32,7 @@ RUN cd /tmp/ \
     && cd aws-code-habits \
     && make devcontainer/terraform/init \
     && rm -rf /tmp/aws-code-habits \
+    && cd ${__WORKSPACE_FOLDER} \
     && git config --global --add safe.directory ${__WORKSPACE_FOLDER}
 
 VOLUME [ "${__WORKSPACE_FOLDER}" ]

@@ -7,7 +7,7 @@
     "./docker-compose.yml"
   ],
 
-
+  "postStartCommand": "find /workspace/.devcontainer -maxdepth 1 -type d -exec git config --global --add safe.directory '{}' \\;",
   "service": "aws-tf-01",
   "shutdownAction": "none",
   "customizations": {
