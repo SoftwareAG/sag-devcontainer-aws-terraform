@@ -21,15 +21,16 @@
       },
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
-        "hashicorp.terraform",
         "adamibs.terraform-live-graph",
         "amazonwebservices.aws-toolkit-vscode",
         "bridgecrew.checkov",
         "donjayamanne.githis",
         "dotenv.dotenv-vscode",
         "eamodio.gitlens",
+        "esbenp.prettier-vscode", 
         "fchieze.terraformer",
         "hashicorp.hcl",
+        "hashicorp.terraform",
         "mhutchie.git-graph",
         "ms-azuretools.vscode-docker",
         "necatiarslan.aws-access-vscode-extension",
