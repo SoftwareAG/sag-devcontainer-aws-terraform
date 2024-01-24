@@ -6,10 +6,11 @@ ARG __WORKSPACE_FOLDER=/workspace
 
 ENV WORKSPACE_FOLDER=${__WORKSPACE_FOLDER}
 # Install OS packages
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+RUN apt-get -qy update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
         graphviz \
         make \
+    && rm -rf /var/lib/apt/lists/* \
     && mkdir -p ${__WORKSPACE_FOLDER} \
     && chown vscode:vscode ${__WORKSPACE_FOLDER}
 
@@ -19,7 +20,7 @@ USER vscode
 ARG TERRAFORM_DOCS_VERSION=0.17.0
 
 # See https://github.com/aquasecurity/tfsec/releases
-ARG TFSEC_VERSION=1.28.3
+ARG TFSEC_VERSION=1.28.5
 
 # See https://github.com/tenable/terrascan/releases
 ARG TERRASCAN_VERSION=1.18.11
