@@ -6,10 +6,11 @@ ARG __WORKSPACE_FOLDER=/workspace
 
 ENV WORKSPACE_FOLDER=${__WORKSPACE_FOLDER}
 # Install OS packages
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+RUN apt-get -qy update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends \
         graphviz \
         make \
+    && rm -rf /var/lib/apt/lists/* \
     && mkdir -p ${__WORKSPACE_FOLDER} \
     && chown vscode:vscode ${__WORKSPACE_FOLDER}
 
