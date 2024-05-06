@@ -8,4 +8,5 @@ services:
         - __WORKSPACE_FOLDER=${WORKSPACE_FOLDER}
     volumes:
       - ../../:/${WORKSPACE_FOLDER}/
+      - ./home.aws/:/home/vscode/.aws
     command: [ sleep, infinity ]
