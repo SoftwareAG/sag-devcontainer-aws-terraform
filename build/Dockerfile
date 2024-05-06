@@ -19,13 +19,14 @@ USER vscode
 ARG TERRAFORM_DOCS_VERSION=0.17.0
 
 # See https://github.com/aquasecurity/tfsec/releases
-ARG TFSEC_VERSION=1.28.3
+ARG TFSEC_VERSION=1.28.5
 
 # See https://github.com/tenable/terrascan/releases
-ARG TERRASCAN_VERSION=1.18.11
+ARG TERRASCAN_VERSION=1.18.12
 
 # See https://github.com/terraform-linters/tflint-ruleset-aws/releases
-ARG TFLINT_AWS_RULESET_VERSION=0.28.0
+#ARG TFLINT_AWS_RULESET_VERSION=0.28.0
+ARG TFLINT_AWS_RULESET_VERSION=0.50.0
 
 RUN cd /tmp/ \
     && git clone -b main --depth 1 https://github.com/awslabs/aws-code-habits.git \
