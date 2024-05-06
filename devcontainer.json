@@ -22,8 +22,8 @@
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
         "adamibs.terraform-live-graph",
+        "amazonwebservices.amazon-q-vscode",
         "amazonwebservices.aws-toolkit-vscode",
-        "bridgecrew.checkov",
         "donjayamanne.githis",
         "dotenv.dotenv-vscode",
         "eamodio.gitlens",
@@ -41,7 +41,8 @@
         "trunk.io",
         "tylerharris.terraform-link-docs",
         "vitabletech.snippetmaster",
-        "winebarrel.tfstate-show"
+        "winebarrel.tfstate-show",
+        "yzhang.markdown-all-in-one"
       ]
     }
   }
